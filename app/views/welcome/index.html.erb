@@ -1,0 +1,32 @@
+<h1>To Do List</h1>
+<p>This is all the stuff I have to do:</p>
+
+<h3>This is how I want it to look:</h3>
+
+<h2>November 5, 2014</h2>
+<ul>
+	<li>Walk Dog</li>
+	<li>Paint Fence</li>
+</ul>
+
+<h2>November 6, 2014</h2>
+<ul>
+	<li>Dentist</li>
+	<li>Work out</li>
+</ul>
+
+<hr/>
+
+<h3>This is my list of all records sorted by date</h3>
+<% @items.each do |item| %>
+  <h2><%= item.dueby %></h2>
+  <p><%= item.chore %></p>
+<% end %> 
+<hr/>
+
+
+
+
+
+
+

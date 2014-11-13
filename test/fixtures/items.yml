@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chore: MyString
+  dueby: 2014-11-13
+
+two:
+  chore: MyString
+  dueby: 2014-11-13
