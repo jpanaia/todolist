@@ -1,41 +1,22 @@
-<h1>To Do List</h1>
-<p>This is all the stuff I have to do:</p>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<h1>To Do List</h1>
 
-<h3>This is how I want it to look:</h3>
+		<% @myuniquedates.each do |date| %>
+		   <h2><%= date.strftime('%B %d, %Y') %></h2>
+		   <ul>
+		     <% @items.each do |item| %>
+			   <% if date == item.dueby %>                     
+			     <li><%= item.chore %> <%= link_to 'Done', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+			     	 <%= link_to 'Edit', edit_item_path(item), class: "btn btn-default" %>
+			     </li>
+			   <% end %>
+			 <% end %>
+		   </ul>  
+		<% end %>
+		<p align="center"><%= link_to 'New Item', new_item_path, class: "btn btn-default" %><p>
+	</div>
 
-<h2>November 5, 2014</h2>
-<ul>
-	<li>Walk Dog</li>
-	<li>Paint Fence</li>
-</ul>
-
-<h2>November 6, 2014</h2>
-<ul>
-	<li>Dentist</li>
-	<li>Work out</li>
-</ul>
-
-<hr/>
-
-<h3>This is my list of all records sorted by date</h3>
-<% @items.each do |item| %>
-  <h2><%= item.dueby %></h2>
-  <p><%= item.chore %></p>
-<% end %> 
-<hr/>
-
-<h3>This is my hash but it's missing duplicate dates</h3> 
-<%= @list %>
-
-<h3>This is my hash output </h3>
-
-<% @list.each do |key, value| %>
-	<h2><%= key %></h2>
-	<p><%= value %></p>
-<% end %>
-</ul>
-
-
-
+</div>
 
 

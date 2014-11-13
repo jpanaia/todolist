@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+ 	background:url(<%= asset_path "atlanta.jpg" %>) no-repeat;
+ 	background-size: cover;
+ 	font-family: 'Josefin Sans', sans-serif;
+ 	font-size: 20px;
+ }
+
+ li {
+ 	font-family: 'Amatic SC', cursive;
+ 	font-size: 3em;
+ 	margin: 20px auto;
+ 	list-style-type: none;
+ 	width: 300px;
+ 	color: #fef;
+ }
+
+
+ h1 {
+ 	font-family: 'Amatic SC', cursive;
+ 	font-weight: 800;
+ 	font-size: 6em;
+ 	text-align:center;
+ 	color: #4a1c4d;
+ }
+
+ h2 {
+ 	font-family: 'Josefin Sans', sans-serif;
+ 	text-align: center;
+ 	color: #4a1c4d;
+ 	margin-bottom: 10px;
+ 	padding: 10px;
+ 	font-size: 0.9em;
+ 	border-bottom: 1px solid #4a1c4d;
+ }
+
+ .col-md-6 {
+ 	background:rgba(181,147,169,0.9);
+ 	-moz-box-shadow: 6px 5px 20px #77295d;
+	-webkit-box-shadow: 6px 5px 20px #77295d;
+	box-shadow: 6px 5px 20px #77295d;
+ }
