@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-  	 @items = Item.all
+  	 @items = Item.all.order("dueby")
 
   	 @list = {}
 

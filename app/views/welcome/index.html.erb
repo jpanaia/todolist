@@ -24,7 +24,16 @@
 <% end %> 
 <hr/>
 
+<h3>This is my hash but it's missing duplicate dates</h3> 
+<%= @list %>
 
+<h3>This is my hash output </h3>
+
+<% @list.each do |key, value| %>
+	<h2><%= key %></h2>
+	<p><%= value %></p>
+<% end %>
+</ul>
 
 
 
