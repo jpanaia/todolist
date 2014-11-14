@@ -21,10 +21,11 @@
       <div class="form-group" id="date-select">
         <%= f.label "Due By" %><br>
         <%#= f.date_select :dueby, html_options: {class: "form-control"} %>
-        <%= f.text_field :dueby, placeholder: "Enter Date", class: "datepicker form-control" %>
+        <%= f.text_field :dueby, class: "datepicker form-control" %>
       </div>
       <div class="actions form-group">
         <%= f.submit class: "btn btn-primary" %>
       </div>
     <% end %>
+  </div>
 </div>

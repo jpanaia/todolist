@@ -17,8 +17,4 @@
 //= require picker.date.js
 //= require_tree .
 
-$( document ).ready(function() {
-  $('.datepicker').pickadate()
-  
-});
 
