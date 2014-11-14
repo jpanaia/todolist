@@ -18,13 +18,13 @@
         <%= f.label "Task" %><br>
         <%= f.text_field :chore, class: "form-control" %>
       </div>
-      <div class="form-group">
+      <div class="form-group" id="date-select">
         <%= f.label "Due By" %><br>
-        <%= f.date_select :dueby, class: "form-control" %>
+        <%#= f.date_select :dueby, html_options: {class: "form-control"} %>
+        <%= f.text_field :dueby, placeholder: "Enter Date", class: "datepicker form-control" %>
       </div>
       <div class="actions form-group">
         <%= f.submit class: "btn btn-primary" %>
       </div>
     <% end %>
-  </div>
 </div>
