@@ -51,13 +51,14 @@
  	-moz-box-shadow: 6px 5px 20px #77295d;
 	-webkit-box-shadow: 6px 5px 20px #77295d;
 	box-shadow: 6px 5px 20px #77295d;
+	position:relative;
  }
 
- .col-md-1 {
+ .col-xs-1 {
  	line-height:0.6em;
  }
 
- .col-md-11 {
+ .col-xs-11 {
  	line-height: 1em;
  }
 
@@ -67,30 +68,45 @@ a, a:visited, a:active {
 
 a:hover {
 	background: none;
-	text-decoration: none;
-	color: #c04b68;
+	text-decoration:line-through;
+	color: #fff;
 }
 
- .glyphicon-trash, .glyphicon-trash:visited, .glyphicon-trash:active {
+ .glyphicon-pencil, .glyphicon-pencil:visited, .glyphicon-pencil:active {
  	font-size:0.4em;
- 	color: #fff;
+ 	color: #fef;
  	line-height: 1em;
  }
 
-.glyphicon-trash:hover {
+.glyphicon-pencil:hover {
 	background:none;
+	color: #fff;
 	text-decoration: none;
 }
 
-.btn-primary {
-	font-family: 'Josefin Sans', sans-serif;
-	background: #00988d;
-	font-size: 1.5em;
-	padding: 10px 20px;
-	border: 1px solid #09746c;
+.glyphicon-plus {
+	font-size: 0.8em;
 }
 
-.btn-primary:hover {
-	background: #09746c;
-	border: 1px solid #074b46;
+.btn {
+	border-radius: 0;
 }
+
+#btn-add {
+	position:absolute;
+	top: 60px;
+	right: -50px;
+}
+
+	.btn-primary {
+		font-family: 'Josefin Sans', sans-serif;
+		background: #00988d;
+		font-size: 1.5em;
+		padding: 10px 20px;
+		border: 1px solid #09746c;
+	}
+
+	.btn-primary:hover {
+		background: #09746c;
+		border: 1px solid #074b46;
+	}

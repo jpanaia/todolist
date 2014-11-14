@@ -1,5 +1,11 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
+		<div id="btn-add">
+			<%= link_to new_item_path, class: "btn btn-primary" do %>
+			  <span class="glyphicon glyphicon-plus"/> Add
+			<% end %>
+		</div>
+		
 		<h1>To Do List</h1>
 
 		<% if @myuniquedates.empty? == false %>
@@ -10,11 +16,12 @@
 				   <% if date == item.dueby %>                     
 				     <li>
 				     	 <div class="row">
-				     	 	<div class="col-md-1">
-				     	 	  <%= link_to '', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "glyphicon glyphicon-trash" %>
+				     	 	<div class="col-xs-1">
+				     
+				     	 	  <%= link_to '', edit_item_path(item), class: "glyphicon glyphicon-pencil" %>
 				     	 	</div>
-				     	 	<div class="col-md-11">
-				     	 	  <%= link_to item.chore, edit_item_path(item) %>
+				     	 	<div class="col-xs-11">
+				     	 	  <%= link_to item.chore, item, method: :delete, data: { confirm: 'Deleting. You sure?' } %>
 				     	 	</div>
 				     	 </div>
 				     </li>
@@ -25,7 +32,6 @@
 		<% else %>
 			<h2 align="center">No items in list! Add something by pushing the button below.</h2>
 		<% end %>
-		<p align="center"><%= link_to 'Add', new_item_path, class: "btn btn-primary" %><p>
 	</div>
 </div>
 

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <h2>Add or update tasks here</h2>
     <%= form_for(@item) do |f| %>
-    <h2>Go ahead and add a new item</h2>
       <% if @item.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -26,6 +26,5 @@
         <%= f.submit class: "btn btn-primary" %>
       </div>
     <% end %>
-    <%= link_to 'Back', root_path %>
   </div>
 </div>
