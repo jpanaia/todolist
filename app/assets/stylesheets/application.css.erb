@@ -24,7 +24,6 @@
  	font-size: 3em;
  	margin: 20px auto;
  	list-style-type: none;
- 	width: 300px;
  	color: #fef;
  }
 
@@ -39,19 +38,27 @@
 
  h2 {
  	font-family: 'Josefin Sans', sans-serif;
- 	text-align: center;
+ 	text-align: left;
  	color: #4a1c4d;
  	margin-bottom: 10px;
- 	padding: 10px;
- 	font-size: 2em;
+ 	padding: 5px;
+ 	font-size: 1.5em;
  	border-bottom: 1px solid #4a1c4d;
  }
 
- .col-md-6 {
+ .col-md-6.col-md-offset-3 {
  	background:rgba(181,147,169,0.9);
  	-moz-box-shadow: 6px 5px 20px #77295d;
 	-webkit-box-shadow: 6px 5px 20px #77295d;
 	box-shadow: 6px 5px 20px #77295d;
+ }
+
+ .col-md-1 {
+ 	line-height:0.6em;
+ }
+
+ .col-md-11 {
+ 	line-height: 1em;
  }
 
 a, a:visited, a:active { 
@@ -65,11 +72,25 @@ a:hover {
 }
 
  .glyphicon-trash, .glyphicon-trash:visited, .glyphicon-trash:active {
- 	font-size:0.5em;
+ 	font-size:0.4em;
  	color: #fff;
+ 	line-height: 1em;
  }
 
 .glyphicon-trash:hover {
 	background:none;
 	text-decoration: none;
+}
+
+.btn-primary {
+	font-family: 'Josefin Sans', sans-serif;
+	background: #00988d;
+	font-size: 1.5em;
+	padding: 10px 20px;
+	border: 1px solid #09746c;
+}
+
+.btn-primary:hover {
+	background: #09746c;
+	border: 1px solid #074b46;
 }

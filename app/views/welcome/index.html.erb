@@ -2,23 +2,33 @@
 	<div class="col-md-6 col-md-offset-3">
 		<h1>To Do List</h1>
 
-		<% @myuniquedates.each do |date| %>
-		   <h2><%= date.strftime('%B %d, %Y') %></h2>
-		   <ul>
-		     <% @items.each do |item| %>
-			   <% if date == item.dueby %>                     
-			     <li>
-			     	 <%= link_to item.chore, edit_item_path(item) %>
-			     	 <%= link_to '', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "glyphicon glyphicon-trash" %>
-			     </li>
-			   <% end %>
-			 <% end %>
-		   </ul>  
+		<% if @myuniquedates.empty? == false %>
+			<% @myuniquedates.each do |date| %>
+			   <h2><%= date.strftime('%B %d, %Y') %></h2>
+			   <ul>
+			     <% @items.each do |item| %>
+				   <% if date == item.dueby %>                     
+				     <li>
+				     	 <div class="row">
+				     	 	<div class="col-md-1">
+				     	 	  <%= link_to '', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "glyphicon glyphicon-trash" %>
+				     	 	</div>
+				     	 	<div class="col-md-11">
+				     	 	  <%= link_to item.chore, edit_item_path(item) %>
+				     	 	</div>
+				     	 </div>
+				     </li>
+				   <% end %>
+				 <% end %>
+			   </ul>  
+			<% end %>
+		<% else %>
+			<h2 align="center">No items in list! Add something by pushing the button below.</h2>
 		<% end %>
-		<p align="center"><%= link_to 'New Item', new_item_path, class: "btn btn-default" %><p>
+		<p align="center"><%= link_to 'Add', new_item_path, class: "btn btn-primary" %><p>
 	</div>
-
 </div>
+
 
 	
 
