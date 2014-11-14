@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      item:
+        chore: "Task"
+        dueby: "Due Date"
+
+

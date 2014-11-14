@@ -6,6 +6,7 @@
         <div id="error_explanation">
           <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
 
+
           <ul>
           <% @item.errors.full_messages.each do |message| %>
             <li><%= message %></li>
@@ -15,16 +16,19 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.label "Task" %><br>
-        <%= f.text_field :chore, class: "form-control" %>
+         <%= f.label :chore %>
+         <%= f.text_field :chore, class: "form-control" %>
       </div>
       <div class="form-group" id="date-select">
-        <%= f.label "Due By" %><br>
-        <%#= f.date_select :dueby, html_options: {class: "form-control"} %>
-        <%= f.text_field :dueby, class: "datepicker form-control" %>
+          <%= f.label :dueby %>
+          <%#= f.date_select :dueby, html_options: {class: "form-control"} %>
+          <%= f.text_field :dueby, class: "datepicker form-control" %>
       </div>
       <div class="actions form-group">
-        <%= f.submit class: "btn btn-primary" %>
+      <div align="center">  
+        <%= f.submit class: "btn btn-primary btn-lg" %>
+        <%= link_to "Cancel", root_path, class: "btn btn-danger btn-lg" %>
+      </div>
       </div>
     <% end %>
   </div>
