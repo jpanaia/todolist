@@ -14,11 +14,38 @@
  *= require_self
  */
 
+ /* Extra Small */
+@media(max-width:767px){
+ #btn-add {
+  position:relative!important;
+  z-index:999!important;
+  a {
+  	width: 100%!important;
+  	top: 145px!important;
+  	left:0!important;
+  }
+  a:hover {
+  	-moz-transform: none!important;
+    -webkit-transform: none!important;
+    -o-transform: none!important;
+    -ms-transform: none!important;
+    transform: none!important;
+  }
+ }
+  #todo_container {
+  h1 {
+ 	  margin-bottom: 70px!important;
+   }
+  }
+}
 
  body {
- 	background:url(<%= asset_path "atlanta.jpg" %>) no-repeat;
- 	background-size: cover;
- }
+  background: url(<%= asset_path "atlanta.jpg" %>) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
  li {
  	font-family: 'Amatic SC', cursive;
@@ -27,7 +54,6 @@
  	list-style-type: none;
  	color: #fef;
  }
-
 
  h1 {
  	font-family: 'Amatic SC', cursive;
@@ -47,22 +73,20 @@
  	border-bottom: 1px solid #4a1c4d;
  }
 
- .col-md-6.col-md-offset-3 {
+ #todo_container {
  	background:rgba(181,147,169,0.9);
  	-moz-box-shadow: 6px 5px 20px #77295d;
 	-webkit-box-shadow: 6px 5px 20px #77295d;
 	box-shadow: 6px 5px 20px #77295d;
 	position:relative;
- }
-
  .col-xs-1 {
- 	line-height:0.6em;
- }
-
+ 	  line-height:0.6em;
+	 }
  .col-xs-11 {
- 	line-height: 1em;
+	   line-height: 1em;
+ 	}
  }
-
+ 
 a, a:visited, a:active { 
 	color:#fff;
 }
@@ -104,9 +128,19 @@ a:hover {
 }
 
 #btn-add {
-	position:absolute;
-	top: 60px;
-	right: -64px;
+  position:absolute;
+  top: 60px;
+  right: 64px;
+  a { 
+  	position: fixed;
+  }
+  a:hover {
+	-moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
 }
 
 .btn {
@@ -142,8 +176,4 @@ a:hover {
     list-style: square;
     color: #fff;
   }
-}
-
-#date-select select {
-    padding: 10px;
 }

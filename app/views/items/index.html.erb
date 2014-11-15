@@ -1,33 +1,36 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h1>Add Item</h1>
+  <div class="col-md-6 col-md-offset-3" id="todo_container">
+    <div id="btn-add">
+      <%= link_to new_item_path, class: "btn btn-primary" do %>
+        <span class="glyphicon glyphicon-plus"></span> Add A Task
+      <% end %>
+    </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Chore</th>
-          <th>Dueby</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
+    <h1>To Do List</h1>
 
-      <tbody>
-        <% @items.each do |item| %>
-          <tr>
-            <td><%= item.chore %></td>
-            <td><%= item.dueby %></td>
-            <td><%= link_to 'Show', item %></td>
-            <td><%= link_to 'Edit', edit_item_path(item) %></td>
-            <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-    <br>
-
-    <%= link_to 'New Item', new_item_path %> | <%= link_to 'List', root_path %>
+    <% if @myuniquedates.empty? == false %>
+      <% @myuniquedates.each do |date| %>
+         <h2><%= date.strftime('%B %d, %Y') %></h2>
+         <ul>
+           <% @items.each do |item| %>
+           <% if date == item.dueby %>                     
+             <li>
+               <div class="row">
+                <div class="col-xs-1">
+             
+                  <%= link_to '', edit_item_path(item), class: "glyphicon glyphicon-pencil" %>
+                </div>
+                <div class="col-xs-11">
+                  <%= link_to item.chore, item, method: :delete, data: { confirm: 'Deleting. You sure?' } %>
+                </div>
+               </div>
+             </li>
+           <% end %>
+         <% end %>
+         </ul>  
+      <% end %>
+    <% else %>
+      <h2 align="center">No items in list! Add something by pushing the button below.</h2>
+    <% end %>
   </div>
 </div>
